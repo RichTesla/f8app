@@ -49,7 +49,7 @@ export default class F8GanttNowMarker extends React.Component {
       minutesSinceStartOfDay = mNow.diff(mDayStart, "minutes");
 
     const pos =
-      containerWidth / minutesTotalDayLength * minutesSinceStartOfDay -
+      (containerWidth / minutesTotalDayLength) * minutesSinceStartOfDay -
       NOW_MARKER_DOT / 2;
 
     return (

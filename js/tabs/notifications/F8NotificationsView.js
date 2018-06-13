@@ -160,4 +160,7 @@ function actions(dispatch) {
 }
 
 /* exports ================================================================== */
-module.exports = connect(select, actions)(F8NotificationsView);
+module.exports = connect(
+  select,
+  actions
+)(F8NotificationsView);

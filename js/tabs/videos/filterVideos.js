@@ -26,26 +26,26 @@ import type { Video } from "../../reducers/videos";
 type StringMap = { [key: string]: boolean };
 
 /**
-* ==============================================================================
-* Filter videos by year
-* ------------------------------------------------------------------------------
-* @param {Array.<Video>} videos Collection of videos from Parse class
-* @param {Number} year the year to match against
-* @return {Array}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * Filter videos by year
+ * ------------------------------------------------------------------------------
+ * @param {Array.<Video>} videos Collection of videos from Parse class
+ * @param {Number} year the year to match against
+ * @return {Array}
+ * ==============================================================================
+ */
 export function byYear(videos: Array<Video>, year: number): Array<Video> {
   return videos.filter(video => video.year === year);
 }
 
 /**
-* ==============================================================================
-* Sort flat list of videos into 1-2-2-2... pattern for list view rendering
-* ------------------------------------------------------------------------------
-* @param {Array.<Video>} videos Collection of videos from Parse class
-* @return {Array.Array.<Video>}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * Sort flat list of videos into 1-2-2-2... pattern for list view rendering
+ * ------------------------------------------------------------------------------
+ * @param {Array.<Video>} videos Collection of videos from Parse class
+ * @return {Array.Array.<Video>}
+ * ==============================================================================
+ */
 export function asListRows(
   videos: Array<Video> = [],
   splitRowsThreshold: number = 6
@@ -76,14 +76,14 @@ export function asListRows(
 }
 
 /**
-* ==============================================================================
-* Filter videos by selected topics
-* ------------------------------------------------------------------------------
-* @param {Array.<Video>} videos Collection of videos from Parse class
-* @param {Object} topics { <topic string> : boolean } list of enabled topics
-* @return {Array.<Video>}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * Filter videos by selected topics
+ * ------------------------------------------------------------------------------
+ * @param {Array.<Video>} videos Collection of videos from Parse class
+ * @param {Object} topics { <topic string> : boolean } list of enabled topics
+ * @return {Array.<Video>}
+ * ==============================================================================
+ */
 export function byTopics(
   videos: Array<Video>,
   topics: StringMap

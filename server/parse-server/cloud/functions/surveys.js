@@ -28,8 +28,7 @@ Parse.Cloud.define("send_surveys", function(request, response) {
     .equalTo("session", agenda)
     .first({ useMasterKey: true });
 
-  Parse.Promise
-    .when(attendees, survey, new Parse.Query(Agenda).get(sessionId))
+  Parse.Promise.when(attendees, survey, new Parse.Query(Agenda).get(sessionId))
     .then(sendSurveys)
     .then(
       function(value) {
@@ -113,43 +112,38 @@ function sendSurveys(attendees, survey, session) {
   }
 
   console.log("Found " + attendees.length + " attendees");
-  return Parse.Promise
-    .when(
-      attendees.map(function(record) {
-        const user = record.get("user");
-        return new SurveyResult()
-          .save(
+  return Parse.Promise.when(
+    attendees.map(function(record) {
+      const user = record.get("user");
+      return new SurveyResult()
+        .save(
+          {
+            user: user,
+            survey: survey
+          },
+          { useMasterKey: true }
+        )
+        .then(function() {
+          return Parse.Push.send(
             {
-              user: user,
-              survey: survey
+              where: new Parse.Query(Parse.Installation).equalTo("user", user),
+              data: {
+                badge: "Increment",
+                alert: 'How was "' + session.get("sessionTitle") + '"?',
+                e: true, // ephemeral
+                sound: "default"
+              }
             },
             { useMasterKey: true }
-          )
-          .then(function() {
-            return Parse.Push.send(
-              {
-                where: new Parse.Query(Parse.Installation).equalTo(
-                  "user",
-                  user
-                ),
-                data: {
-                  badge: "Increment",
-                  alert: 'How was "' + session.get("sessionTitle") + '"?',
-                  e: true, // ephemeral
-                  sound: "default"
-                }
-              },
-              { useMasterKey: true }
-            );
-          })
-          .then(function() {
-            return record.save({ sent: true });
-          });
-      })
-    )
-    .then(function() {
-      return arguments.length;
-    });
+          );
+        })
+        .then(function() {
+          return record.save({ sent: true });
+        });
+    })
+  ).then(function() {
+    return arguments.length;
+  });
 }
 
 function toSurveys(emptyResults) {

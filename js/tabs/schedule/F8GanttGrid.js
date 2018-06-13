@@ -53,7 +53,7 @@ export default class F8GanttGrid extends React.Component {
     let cols = [];
     let previousLabelAMPM = null;
     for (let i = 0; i < count + 1; i++) {
-      const left = this.props.containerWidth / count * i - LABELS_WIDTH / 2;
+      const left = (this.props.containerWidth / count) * i - LABELS_WIDTH / 2;
       let label = null;
       if (i % 2 === 0) {
         let labelText = momentStart.add(i, "h").format("h");

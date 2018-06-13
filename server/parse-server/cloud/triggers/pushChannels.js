@@ -11,8 +11,7 @@ Parse.Cloud.afterSave(Parse.User, function(request) {
     .query()
     .select(["id"])
     .find({ useMasterKey: true });
-  Parse.Promise
-    .when(installationsQ, scheduleQ)
+  Parse.Promise.when(installationsQ, scheduleQ)
     .then(function(installations, schedule) {
       console.log(
         "Found " +

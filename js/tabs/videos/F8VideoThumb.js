@@ -42,18 +42,18 @@ const WINDOW_WIDTH = Dimensions.get("window").width,
   NUMLINES_LARGE = 2;
 
 /**
-* ==============================================================================
-* <F8VideoThumb />
-* ------------------------------------------------------------------------------
-* @param {?String} type Layout style (default "small")
-* @param {?String} title Video title
-* @param {?String} length Video length
-* @param {?String} image Thumbnail image source
-* @param {?Boolean} watched Has video already been watched by user
-* @param {?Number} activeOpacity On-tap opacity value (default 0.75)
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8VideoThumb />
+ * ------------------------------------------------------------------------------
+ * @param {?String} type Layout style (default "small")
+ * @param {?String} title Video title
+ * @param {?String} length Video length
+ * @param {?String} image Thumbnail image source
+ * @param {?Boolean} watched Has video already been watched by user
+ * @param {?Number} activeOpacity On-tap opacity value (default 0.75)
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8VideoThumb extends React.Component {
   static defaultProps = {

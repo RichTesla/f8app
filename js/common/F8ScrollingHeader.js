@@ -30,15 +30,15 @@ import { PixelRatio, StyleSheet, Animated } from "react-native";
 const TRANSLATE_Y_DISTANCE = 10;
 
 /**
-* ==============================================================================
-* <F8ScrollingHeader />
-* ------------------------------------------------------------------------------
-* @param {string} text the title text
-* @param {?number} trigger the scroll position to trigger intro/outro animation
-* @param {?number} duration intro/outro animation duration
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8ScrollingHeader />
+ * ------------------------------------------------------------------------------
+ * @param {string} text the title text
+ * @param {?number} trigger the scroll position to trigger intro/outro animation
+ * @param {?number} duration intro/outro animation duration
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 export default class F8ScrollingHeader extends React.Component {
   static defaultProps = {

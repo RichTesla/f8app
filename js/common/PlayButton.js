@@ -31,16 +31,16 @@ const BUTTON_SIZE = 76,
   BUTTON_SIZE_SM = 16;
 
 /**
-* ==============================================================================
-* <PlayButton />
-* ------------------------------------------------------------------------------
-* @param {?string} type Display style default "large" || "small"
-* @param {?string} buttonColor Background color
-* @param {?string} iconColor Icon tint color
-* @param {?function} onPress event callback
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <PlayButton />
+ * ------------------------------------------------------------------------------
+ * @param {?string} type Display style default "large" || "small"
+ * @param {?string} buttonColor Background color
+ * @param {?string} iconColor Icon tint color
+ * @param {?function} onPress event callback
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class PlayButton extends React.Component {
   static defaultProps = {

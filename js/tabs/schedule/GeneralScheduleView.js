@@ -283,4 +283,7 @@ function actions(dispatch) {
   };
 }
 
-module.exports = connect(select, actions)(GeneralScheduleView);
+module.exports = connect(
+  select,
+  actions
+)(GeneralScheduleView);

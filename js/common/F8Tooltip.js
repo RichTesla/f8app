@@ -33,19 +33,19 @@ const ARROW_WIDTH = 23,
   TRANSLATE_Y_DISTANCE = 10;
 
 /**
-* ==============================================================================
-* <F8Tooltip />
-* ------------------------------------------------------------------------------
-* @param {?string} title at least one of title/text is required (no content, no render)
-* @param {?string} text at least one of title/text is required (no content, no render)
-* @param {?number} x x position
-* @param {?number} y x position
-* @param {?string} align top or bottom placement of tooltip // TODO
-* @param {?string} hitboxColor background overlay color
-* @param {?function} onDismiss Callback
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8Tooltip />
+ * ------------------------------------------------------------------------------
+ * @param {?string} title at least one of title/text is required (no content, no render)
+ * @param {?string} text at least one of title/text is required (no content, no render)
+ * @param {?number} x x position
+ * @param {?number} y x position
+ * @param {?string} align top or bottom placement of tooltip // TODO
+ * @param {?string} hitboxColor background overlay color
+ * @param {?function} onDismiss Callback
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8Tooltip extends React.Component {
   static defaultProps = {

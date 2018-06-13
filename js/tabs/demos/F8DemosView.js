@@ -47,15 +47,15 @@ const WINDOW_WIDTH = Dimensions.get("window").width,
   PATTERN_OFFSET = PATTERN_HEIGHT - PATTERN_VISIBLE;
 
 /**
-* ==============================================================================
-* <F8DemosView />
-* ------------------------------------------------------------------------------
-* @param {Array.<Demo>} demos Parse Demo class
-* @param {Config} config Parse config vars
-* @param {F8Navigator} navigator Navigation methods
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8DemosView />
+ * ------------------------------------------------------------------------------
+ * @param {Array.<Demo>} demos Parse Demo class
+ * @param {Config} config Parse config vars
+ * @param {F8Navigator} navigator Navigation methods
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8DemosView extends React.Component {
   constructor(props) {
@@ -109,7 +109,8 @@ class F8DemosView extends React.Component {
               <PureListView
                 renderRow={_ => {}}
                 renderEmptyList={() =>
-                  this.renderView(demos, garages, hasBookables)}
+                  this.renderView(demos, garages, hasBookables)
+                }
               />
             </ListContainer>
           );
@@ -213,7 +214,8 @@ class F8DemosView extends React.Component {
               backgroundColor: F8Colors.turquoise,
               titleColor: F8Colors.white,
               itemsColor: F8Colors.white
-            })}
+            })
+          }
         />
       );
     } else {

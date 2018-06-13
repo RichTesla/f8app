@@ -162,11 +162,13 @@ class F8TabsView extends React.Component {
           renderIcon={_ =>
             this.renderTabIcon(
               require("./schedule/img/tab-icon/my-f8/default.png")
-            )}
+            )
+          }
           renderSelectedIcon={_ =>
             this.renderTabIcon(
               require("./schedule/img/tab-icon/my-f8/active.png")
-            )}
+            )
+          }
         >
           <MyScheduleView
             now={this.state.now}
@@ -181,9 +183,11 @@ class F8TabsView extends React.Component {
           selected={this.props.tab === "demos"}
           onPress={this.onTabSelect.bind(this, "demos")}
           renderIcon={_ =>
-            this.renderTabIcon(require("./demos/img/tab-icon/default.png"))}
+            this.renderTabIcon(require("./demos/img/tab-icon/default.png"))
+          }
           renderSelectedIcon={_ =>
-            this.renderTabIcon(require("./demos/img/tab-icon/active.png"))}
+            this.renderTabIcon(require("./demos/img/tab-icon/active.png"))
+          }
         >
           <F8DemosView navigator={this.props.navigator} />
         </TabNavigator.Item>
@@ -195,9 +199,11 @@ class F8TabsView extends React.Component {
           selected={this.props.tab === "videos"}
           onPress={this.onTabSelect.bind(this, "videos")}
           renderIcon={_ =>
-            this.renderTabIcon(require("./videos/img/tab-icon/default.png"))}
+            this.renderTabIcon(require("./videos/img/tab-icon/default.png"))
+          }
           renderSelectedIcon={_ =>
-            this.renderTabIcon(require("./videos/img/tab-icon/active.png"))}
+            this.renderTabIcon(require("./videos/img/tab-icon/active.png"))
+          }
         >
           <F8VideosView navigator={this.props.navigator} />
         </TabNavigator.Item>
@@ -210,9 +216,11 @@ class F8TabsView extends React.Component {
           onPress={this.onTabSelect.bind(this, "info")}
           renderBadge={_ => <TabBadge value={this.props.notificationsBadge} />}
           renderIcon={_ =>
-            this.renderTabIcon(require("./info/img/tab-icon/default.png"))}
+            this.renderTabIcon(require("./info/img/tab-icon/default.png"))
+          }
           renderSelectedIcon={_ =>
-            this.renderTabIcon(require("./info/img/tab-icon/active.png"))}
+            this.renderTabIcon(require("./info/img/tab-icon/active.png"))
+          }
         >
           <F8InfoView navigator={this.props.navigator} />
         </TabNavigator.Item>
@@ -335,4 +343,7 @@ function actions(dispatch) {
 
 /* Export
 ============================================================================= */
-module.exports = connect(select, actions)(F8TabsView);
+module.exports = connect(
+  select,
+  actions
+)(F8TabsView);

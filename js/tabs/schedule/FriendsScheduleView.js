@@ -111,8 +111,9 @@ class FriendsScheduleView extends React.Component {
       <EmptySchedule
         style={{ height: containerHeight }}
         title="Nothing to show."
-        text={`${this.props.friend
-          .name} has not added any sessions for day ${day}`}
+        text={`${
+          this.props.friend.name
+        } has not added any sessions for day ${day}`}
       />
     );
   }

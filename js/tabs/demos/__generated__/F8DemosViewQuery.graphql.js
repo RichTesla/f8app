@@ -1,31 +1,33 @@
 /**
  * @flow
- * @relayHash d1f7b51cfc6f9fe392e405fc2f8b3967
+ * @relayHash ad78a3a3a3973a5d79e4ba701226e1ac
  */
 
 /* eslint-disable */
 
-"use strict";
+'use strict';
 
 /*::
-import type {ConcreteBatch} from 'relay-runtime';
+import type { ConcreteRequest } from 'relay-runtime';
+export type F8DemosViewQueryVariables = {||};
 export type F8DemosViewQueryResponse = {|
   +demos: ?$ReadOnlyArray<?{|
-    +title: ?string;
-    +description: ?string;
-    +booking: ?string;
-    +location: ?string;
+    +title: ?string,
+    +description: ?string,
+    +booking: ?string,
+    +location: ?string,
     +links: ?$ReadOnlyArray<?{|
-      +title: ?string;
-      +url: ?string;
-    |}>;
-    +logo: ?string;
-    +logoHeight: ?number;
-    +logoWidth: ?number;
-    +devGarage: ?boolean;
-  |}>;
+      +title: ?string,
+      +url: ?string,
+    |}>,
+    +logo: ?string,
+    +logoHeight: ?number,
+    +logoWidth: ?number,
+    +devGarage: ?boolean,
+  |}>
 |};
 */
+
 
 /*
 query F8DemosViewQuery {
@@ -47,221 +49,154 @@ query F8DemosViewQuery {
 }
 */
 
-const batch /*: ConcreteBatch*/ = {
-  fragment: {
-    argumentDefinitions: [],
-    kind: "Fragment",
-    metadata: null,
-    name: "F8DemosViewQuery",
-    selections: [
+const node/*: ConcreteRequest*/ = (function(){
+var v0 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "title",
+  "args": null,
+  "storageKey": null
+},
+v1 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "description",
+  "args": null,
+  "storageKey": null
+},
+v2 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "booking",
+  "args": null,
+  "storageKey": null
+},
+v3 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "location",
+  "args": null,
+  "storageKey": null
+},
+v4 = {
+  "kind": "LinkedField",
+  "alias": null,
+  "name": "links",
+  "storageKey": null,
+  "args": null,
+  "concreteType": "DemoLink",
+  "plural": true,
+  "selections": [
+    v0,
+    {
+      "kind": "ScalarField",
+      "alias": null,
+      "name": "url",
+      "args": null,
+      "storageKey": null
+    }
+  ]
+},
+v5 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "logo",
+  "args": null,
+  "storageKey": null
+},
+v6 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "logoHeight",
+  "args": null,
+  "storageKey": null
+},
+v7 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "logoWidth",
+  "args": null,
+  "storageKey": null
+},
+v8 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "devGarage",
+  "args": null,
+  "storageKey": null
+};
+return {
+  "kind": "Request",
+  "operationKind": "query",
+  "name": "F8DemosViewQuery",
+  "id": null,
+  "text": "query F8DemosViewQuery {\n  demos {\n    title\n    description\n    booking\n    location\n    links {\n      title\n      url\n    }\n    logo\n    logoHeight\n    logoWidth\n    devGarage\n    id\n  }\n}\n",
+  "metadata": {},
+  "fragment": {
+    "kind": "Fragment",
+    "name": "F8DemosViewQuery",
+    "type": "Query",
+    "metadata": null,
+    "argumentDefinitions": [],
+    "selections": [
       {
-        kind: "LinkedField",
-        alias: null,
-        args: null,
-        concreteType: "Demo",
-        name: "demos",
-        plural: true,
-        selections: [
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "title",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "description",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "booking",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "location",
-            storageKey: null
-          },
-          {
-            kind: "LinkedField",
-            alias: null,
-            args: null,
-            concreteType: "DemoLink",
-            name: "links",
-            plural: true,
-            selections: [
-              {
-                kind: "ScalarField",
-                alias: null,
-                args: null,
-                name: "title",
-                storageKey: null
-              },
-              {
-                kind: "ScalarField",
-                alias: null,
-                args: null,
-                name: "url",
-                storageKey: null
-              }
-            ],
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logo",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logoHeight",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logoWidth",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "devGarage",
-            storageKey: null
-          }
-        ],
-        storageKey: null
-      }
-    ],
-    type: "Query"
-  },
-  id: null,
-  kind: "Batch",
-  metadata: {},
-  name: "F8DemosViewQuery",
-  query: {
-    argumentDefinitions: [],
-    kind: "Root",
-    name: "F8DemosViewQuery",
-    operation: "query",
-    selections: [
-      {
-        kind: "LinkedField",
-        alias: null,
-        args: null,
-        concreteType: "Demo",
-        name: "demos",
-        plural: true,
-        selections: [
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "title",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "description",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "booking",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "location",
-            storageKey: null
-          },
-          {
-            kind: "LinkedField",
-            alias: null,
-            args: null,
-            concreteType: "DemoLink",
-            name: "links",
-            plural: true,
-            selections: [
-              {
-                kind: "ScalarField",
-                alias: null,
-                args: null,
-                name: "title",
-                storageKey: null
-              },
-              {
-                kind: "ScalarField",
-                alias: null,
-                args: null,
-                name: "url",
-                storageKey: null
-              }
-            ],
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logo",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logoHeight",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "logoWidth",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "devGarage",
-            storageKey: null
-          },
-          {
-            kind: "ScalarField",
-            alias: null,
-            args: null,
-            name: "id",
-            storageKey: null
-          }
-        ],
-        storageKey: null
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "demos",
+        "storageKey": null,
+        "args": null,
+        "concreteType": "Demo",
+        "plural": true,
+        "selections": [
+          v0,
+          v1,
+          v2,
+          v3,
+          v4,
+          v5,
+          v6,
+          v7,
+          v8
+        ]
       }
     ]
   },
-  text:
-    "query F8DemosViewQuery {\n  demos {\n    title\n    description\n    booking\n    location\n    links {\n      title\n      url\n    }\n    logo\n    logoHeight\n    logoWidth\n    devGarage\n    id\n  }\n}\n"
+  "operation": {
+    "kind": "Operation",
+    "name": "F8DemosViewQuery",
+    "argumentDefinitions": [],
+    "selections": [
+      {
+        "kind": "LinkedField",
+        "alias": null,
+        "name": "demos",
+        "storageKey": null,
+        "args": null,
+        "concreteType": "Demo",
+        "plural": true,
+        "selections": [
+          v0,
+          v1,
+          v2,
+          v3,
+          v4,
+          v5,
+          v6,
+          v7,
+          v8,
+          {
+            "kind": "ScalarField",
+            "alias": null,
+            "name": "id",
+            "args": null,
+            "storageKey": null
+          }
+        ]
+      }
+    ]
+  }
 };
-
-module.exports = batch;
+})();
+// prettier-ignore
+(node/*: any*/).hash = 'ff8813257da8158810e594c6620227b6';
+module.exports = node;

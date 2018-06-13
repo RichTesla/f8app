@@ -41,16 +41,16 @@ const WINDOW_WIDTH = Dimensions.get("window").width,
   VIDEO_ASPECT_RATIO = 16 / 9;
 
 /**
-* ==============================================================================
-* <F8VideoPlayer />
-* ------------------------------------------------------------------------------
-* @param {string}   source   Video URL
-* @param {?boolean} autoplay Inline video player only
-* @param {?number}  width    View width
-* @param {?number}  height   View height
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8VideoPlayer />
+ * ------------------------------------------------------------------------------
+ * @param {string}   source   Video URL
+ * @param {?boolean} autoplay Inline video player only
+ * @param {?number}  width    View width
+ * @param {?number}  height   View height
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8VideoPlayer extends React.Component {
   static defaultProps = {

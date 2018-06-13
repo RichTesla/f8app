@@ -64,7 +64,8 @@ class Row extends React.Component {
               if (supported) {
                 F8Linking.openURL(url);
               }
-            })}
+            })
+          }
         >
           <Paragraph>
             <Text style={styles.question}>{this.props.question} </Text>

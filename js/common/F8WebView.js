@@ -48,17 +48,17 @@ const NAVBAR_HEIGHT_IOS = 45,
   DISABLED_OPACITY = 0.3;
 
 /**
-* ==============================================================================
-* <F8WebView />
-* ------------------------------------------------------------------------------
-* @param {string} url WebView source prop
-* @param {AnyObject} navigator F8Navigator for back button 'pop'
-* @param {?string} backgroundColor Optional header background color
-* @param {?string} titleColor Optional header title color
-* @param {?string} itemsColor Optional header items color
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8WebView />
+ * ------------------------------------------------------------------------------
+ * @param {string} url WebView source prop
+ * @param {AnyObject} navigator F8Navigator for back button 'pop'
+ * @param {?string} backgroundColor Optional header background color
+ * @param {?string} titleColor Optional header title color
+ * @param {?string} itemsColor Optional header items color
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8WebView extends React.Component {
   static defaultProps = {

@@ -22,15 +22,14 @@ Parse.Cloud.define("send_push_by_channel", function(request, response) {
   pushData.badge = "Increment";
   pushData.sound = "default";
 
-  Parse.Push
-    .send(
-      {
-        // channels: ['developer'], // DONE: remove scoping
-        channels: request.params.channels, // DONE: remove scoping
-        data: pushData
-      },
-      { useMasterKey: true }
-    )
+  Parse.Push.send(
+    {
+      // channels: ['developer'], // DONE: remove scoping
+      channels: request.params.channels, // DONE: remove scoping
+      data: pushData
+    },
+    { useMasterKey: true }
+  )
     // return a success or error response
     .then(
       function(value) {

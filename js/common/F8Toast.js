@@ -34,18 +34,18 @@ const INTRO_DELAY_DUR = 300,
   TRANSLATE_Y_DISTANCE = 60;
 
 /**
-* ==============================================================================
-* <F8Toast />
-* ------------------------------------------------------------------------------
-* @param {?function} onComplete Outro animation callback
-* @param {?string} title At least one of title/text is required
-* @param {?string} text At least one of title/text is required
-* @param {?string} backgroundColor Container background color
-* @param {?string} titleColor Heading text color
-* @param {?string} textColor Paragraph text color
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8Toast />
+ * ------------------------------------------------------------------------------
+ * @param {?function} onComplete Outro animation callback
+ * @param {?string} title At least one of title/text is required
+ * @param {?string} text At least one of title/text is required
+ * @param {?string} backgroundColor Container background color
+ * @param {?string} titleColor Heading text color
+ * @param {?string} textColor Paragraph text color
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8Toast extends React.Component {
   static defaultProps = {

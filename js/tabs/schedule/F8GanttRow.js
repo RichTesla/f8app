@@ -57,8 +57,8 @@ export default class F8GanttRow extends React.Component {
       daySessionStartDiff = mSessionStart.diff(mDayStart, "minutes");
 
     return {
-      left: daySessionStartDiff / dayLength * containerWidth,
-      width: sessionLength / dayLength * containerWidth
+      left: (daySessionStartDiff / dayLength) * containerWidth,
+      width: (sessionLength / dayLength) * containerWidth
     };
   }
 

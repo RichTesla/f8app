@@ -52,24 +52,22 @@ Parse.Cloud.define("test_push", function(request, response) {
 
   data.badge = "Increment";
 
-  Parse.Push
-    .send(
-      {
-        where: query,
-        push_time: new Date(Date.now() + 3000),
-        badge: "Increment",
-        data: data
-      },
-      { useMasterKey: true }
-    )
-    .then(
-      function() {
-        response.success([]);
-      },
-      function(error) {
-        response.error(error);
-      }
-    );
+  Parse.Push.send(
+    {
+      where: query,
+      push_time: new Date(Date.now() + 3000),
+      badge: "Increment",
+      data: data
+    },
+    { useMasterKey: true }
+  ).then(
+    function() {
+      response.success([]);
+    },
+    function(error) {
+      response.error(error);
+    }
+  );
 });
 
 Parse.Cloud.define("test_survey", function(request, response) {

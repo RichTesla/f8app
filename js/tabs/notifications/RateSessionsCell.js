@@ -38,9 +38,9 @@ type Props = {
 ============================================================================= */
 
 function RateSessionsCell({ numberOfSessions, onPress }: Props) {
-  const label = `Rate the session${numberOfSessions === 1
-    ? ""
-    : "s"} you attended`;
+  const label = `Rate the session${
+    numberOfSessions === 1 ? "" : "s"
+  } you attended`;
   return (
     <TouchableOpacity
       style={styles.cell}

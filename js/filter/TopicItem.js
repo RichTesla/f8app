@@ -31,16 +31,16 @@ import F8Fonts from "../common/F8Fonts";
 import * as TopicIcons from "./topicIcons";
 
 /**
-* ==============================================================================
-* Filter screen list items
-* ------------------------------------------------------------------------------
-* @extends React.Component
-* @param {string} topic The name of the topic
-* @param {number} icon the year to match against
-* @param {boolean} isChecked whether to show the default/active appearance
-* @param {function} onToggle handler for tap event
-* ==============================================================================
-*/
+ * ==============================================================================
+ * Filter screen list items
+ * ------------------------------------------------------------------------------
+ * @extends React.Component
+ * @param {string} topic The name of the topic
+ * @param {number} icon the year to match against
+ * @param {boolean} isChecked whether to show the default/active appearance
+ * @param {function} onToggle handler for tap event
+ * ==============================================================================
+ */
 export default class TopicItem extends React.Component {
   props: {
     topic: string,

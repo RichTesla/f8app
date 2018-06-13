@@ -15,14 +15,14 @@ const TOPIC_ICONS = {
 };
 
 /**
-* ==============================================================================
-* Get filter list item icons by index and active/default state
-* ------------------------------------------------------------------------------
-* @param {?string} state Whether to return default or active state icons
-* @param {?number} idx Index for varied icons
-* @return {number} RN Asset Source format
-* ==============================================================================
-*/
+ * ==============================================================================
+ * Get filter list item icons by index and active/default state
+ * ------------------------------------------------------------------------------
+ * @param {?string} state Whether to return default or active state icons
+ * @param {?number} idx Index for varied icons
+ * @return {number} RN Asset Source format
+ * ==============================================================================
+ */
 export function get(state = "default", idx = 0) {
   // sanitize input
   if (!TOPIC_ICONS[state]) {

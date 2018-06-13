@@ -63,7 +63,9 @@ class FriendsListView extends React.Component {
         renderRow={this.renderRow}
         renderEmptyList={this.renderEmptyList}
         renderFooter={this.renderFooter}
-        {...(this.props: any) /* flow can't guarantee the shape of props */}
+        {
+          ...(this.props: any) /* flow can't guarantee the shape of props */
+        }
       />
     );
   }

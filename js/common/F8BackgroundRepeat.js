@@ -27,15 +27,15 @@ import { View, Image } from "react-native";
 import resolveAssetSource from "resolveAssetSource";
 
 /**
-* ==============================================================================
-* <F8BackgroundRepeat />
-* ------------------------------------------------------------------------------
-* @param {number} source ReactNative asset source
-* @param {number} width repeating container width
-* @param {number} height repeating container height
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8BackgroundRepeat />
+ * ------------------------------------------------------------------------------
+ * @param {number} source ReactNative asset source
+ * @param {number} width repeating container width
+ * @param {number} height repeating container height
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 class F8BackgroundRepeat extends React.Component {
   static __cards__;
 

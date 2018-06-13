@@ -109,7 +109,7 @@ class ParallaxBackground extends React.Component {
       extrapolate: "clamp"
     });
     // Sometimes image width is smaller than device's width
-    const initialScale = Math.max(SCREEN_WIDTH / width * 2 - 1, 1);
+    const initialScale = Math.max((SCREEN_WIDTH / width) * 2 - 1, 1);
     const scale = offset.interpolate({
       inputRange: [-length, 0],
       outputRange: [2, initialScale],

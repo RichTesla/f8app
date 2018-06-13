@@ -42,15 +42,15 @@ const GRADIENT_HEIGHT = 220,
   OUTRO_ANIM_DUR = 150;
 
 /**
-* ==============================================================================
-* <F8ActionSheet />
-* ------------------------------------------------------------------------------
-* @param {Array<Object>} actions Action buttons to render { text:str, onPress:fn }
-* @param {function} onCancel 'x' button callback (called after outro animation)
-* @param {?string} title Actions header
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8ActionSheet />
+ * ------------------------------------------------------------------------------
+ * @param {Array<Object>} actions Action buttons to render { text:str, onPress:fn }
+ * @param {function} onCancel 'x' button callback (called after outro animation)
+ * @param {?string} title Actions header
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8ActionSheet extends React.Component {
   constructor() {

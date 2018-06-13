@@ -27,14 +27,14 @@ import React from "react";
 import { Image, PixelRatio } from "react-native";
 
 /**
-* ==============================================================================
-* <ProfilePicture />
-* ------------------------------------------------------------------------------
-* @param {String} userID Facebook user ID
-* @param {Number} size The desired profile photo size
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <ProfilePicture />
+ * ------------------------------------------------------------------------------
+ * @param {String} userID Facebook user ID
+ * @param {Number} size The desired profile photo size
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 class ProfilePicture extends React.Component {
   props: {
     userID: string,

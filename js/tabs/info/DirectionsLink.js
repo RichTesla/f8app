@@ -27,13 +27,13 @@ import { Text } from "../../common/F8Text";
 import F8Linking from "../../common/F8Linking";
 
 /**
-* ==============================================================================
-* <DirectionsLink />
-* ------------------------------------------------------------------------------
-* @param {string} address Full address to open with selected maps app
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <DirectionsLink />
+ * ------------------------------------------------------------------------------
+ * @param {string} address Full address to open with selected maps app
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class DirectionsLink extends React.Component {
   static defaultProps = {

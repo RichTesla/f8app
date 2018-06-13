@@ -38,16 +38,16 @@ type Props = {
 type State = {};
 
 /**
-* ==============================================================================
-* <AboutLocation />
-* ------------------------------------------------------------------------------
-* @param {?string} title Section title
-* @param {?string} date Formatted date text
-* @param {?string} venue Venue name
-* @param {string} address Address used for opening maps
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <AboutLocation />
+ * ------------------------------------------------------------------------------
+ * @param {?string} title Section title
+ * @param {?string} date Formatted date text
+ * @param {?string} venue Venue name
+ * @param {string} address Address used for opening maps
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 export default class AboutLocation extends React.Component {
   props: Props;

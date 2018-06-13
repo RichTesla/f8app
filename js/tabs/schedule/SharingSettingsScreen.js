@@ -85,7 +85,8 @@ class SharingSettingsScreen extends React.Component {
               style={styles.switch}
               value={!!this.props.sharedSchedule}
               onValueChange={enabled =>
-                this.props.dispatch(setSharingEnabled(enabled))}
+                this.props.dispatch(setSharingEnabled(enabled))
+              }
               onTintColor={F8Colors.green}
             />
             <Text style={styles.option}>YES</Text>

@@ -393,4 +393,7 @@ function actions(dispatch) {
   };
 }
 
-module.exports = connect(select, actions)(MyScheduleView);
+module.exports = connect(
+  select,
+  actions
+)(MyScheduleView);

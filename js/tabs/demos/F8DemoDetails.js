@@ -70,7 +70,8 @@ const F8DemoDetails = React.createClass({
         <ScrollView
           contentContainerStyle={[styles.contentContainer, { paddingBottom }]}
           onScroll={({ nativeEvent }) =>
-            this.setState({ scrollTop: nativeEvent.contentOffset.y })}
+            this.setState({ scrollTop: nativeEvent.contentOffset.y })
+          }
           scrollEventThrottle={100}
           showsVerticalScrollIndicator={false}
           automaticallyAdjustContentInsets={false}
@@ -136,7 +137,8 @@ const F8DemoDetails = React.createClass({
                 backgroundColor: F8Colors.turquoise,
                 titleColor: F8Colors.white,
                 itemsColor: F8Colors.white
-              })}
+              })
+            }
           >
             <Text numberOfLines={1} style={styles.linkText}>
               {link.title}

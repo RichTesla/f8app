@@ -18,8 +18,7 @@ Parse.Cloud.define("survey_response_rate", function(request, response) {
     .equalTo("rawAnswers", null)
     .count({ useMasterKey: true });
 
-  Parse.Promise
-    .when(allQuery, incompleteQuery)
+  Parse.Promise.when(allQuery, incompleteQuery)
     .then(function(allCount, incompletCount) {
       return {
         total: allCount,

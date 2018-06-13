@@ -38,14 +38,14 @@ import { applyVideoFilter, clearVideoFilter } from "../../actions";
 import { createSelector } from "reselect";
 
 /**
-* ==============================================================================
-* <F8VideosView />
-* ------------------------------------------------------------------------------
-* @param {Array.<Video>} videos    Parse Video class
-* @param {F8Navigator}   navigator Navigation methods
-* @return {ReactElement}
-* ==============================================================================
-*/
+ * ==============================================================================
+ * <F8VideosView />
+ * ------------------------------------------------------------------------------
+ * @param {Array.<Video>} videos    Parse Video class
+ * @param {F8Navigator}   navigator Navigation methods
+ * @return {ReactElement}
+ * ==============================================================================
+ */
 
 class F8VideosView extends React.Component {
   constructor() {
@@ -214,4 +214,7 @@ function select(store) {
 }
 
 /* exports ================================================================== */
-module.exports = connect(select, actions)(F8VideosView);
+module.exports = connect(
+  select,
+  actions
+)(F8VideosView);

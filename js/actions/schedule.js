@@ -42,8 +42,7 @@ import type { Session } from "../reducers/sessions";
 function addToSchedule(id: string): ThunkAction {
   return (dispatch: Dispatch) => {
     if (Parse.User.current()) {
-      Parse.User
-        .current()
+      Parse.User.current()
         .relation("mySchedule")
         .add(new Agenda({ id }));
       Parse.User.current().save();
@@ -62,8 +61,7 @@ function addToSchedule(id: string): ThunkAction {
 function removeFromSchedule(id: string): ThunkAction {
   return (dispatch: Dispatch) => {
     if (Parse.User.current()) {
-      Parse.User
-        .current()
+      Parse.User.current()
         .relation("mySchedule")
         .remove(new Agenda({ id }));
       Parse.User.current().save();
@@ -111,8 +109,7 @@ function removeFromScheduleWithPrompt(session: Session): ThunkAction {
 }
 
 async function restoreSchedule(): PromiseAction {
-  const list = await Parse.User
-    .current()
+  const list = await Parse.User.current()
     .relation("mySchedule")
     .query()
     .find();

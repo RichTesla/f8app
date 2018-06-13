@@ -13,11 +13,9 @@ Parse.Cloud.define("friends", function(request, response) {
   const authData = user.get("authData");
   const token = authData.facebook.access_token;
   // TODO: Fetch all friends using paging
-  Parse.Cloud
-    .httpRequest({
-      url:
-        "https://graph.facebook.com/me/friends?fields=id&access_token=" + token
-    })
+  Parse.Cloud.httpRequest({
+    url: "https://graph.facebook.com/me/friends?fields=id&access_token=" + token
+  })
     .then(function(res) {
       const friendIds = res.data.data.map(function(friend) {
         return friend.id;

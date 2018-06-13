@@ -63,7 +63,8 @@ const F8SessionDetails = React.createClass({
         <ScrollView
           contentContainerStyle={styles.contentContainer}
           onScroll={({ nativeEvent }) =>
-            this.setState({ scrollTop: nativeEvent.contentOffset.y })}
+            this.setState({ scrollTop: nativeEvent.contentOffset.y })
+          }
           scrollEventThrottle={100}
           showsVerticalScrollIndicator={false}
           automaticallyAdjustContentInsets={false}
@@ -116,14 +117,15 @@ const F8SessionDetails = React.createClass({
   },
 
   renderSpeakers() {
-    const speakersProfiles = (this.props.session.speakers || []
-    ).map(speaker => (
-      <F8SpeakerProfile
-        key={speaker.name}
-        speaker={speaker}
-        style={{ marginTop: 5 }}
-      />
-    ));
+    const speakersProfiles = (this.props.session.speakers || []).map(
+      speaker => (
+        <F8SpeakerProfile
+          key={speaker.name}
+          speaker={speaker}
+          style={{ marginTop: 5 }}
+        />
+      )
+    );
 
     if (speakersProfiles.length) {
       return <Section title="Hosted By">{speakersProfiles}</Section>;
@@ -350,4 +352,7 @@ function actions(dispatch, props) {
   };
 }
 
-module.exports = connect(select, actions)(F8SessionDetails);
+module.exports = connect(
+  select,
+  actions
+)(F8SessionDetails);
